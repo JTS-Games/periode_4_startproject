@@ -12,7 +12,7 @@ export class Game extends Engine {
     startGame() {
         console.log("start de game!")
         const fish = new Actor()
-        fish.graphics.use(Resources.hank.toSprite())
+        fish.graphics.use(Resources.Fish.toSprite())
         fish.pos = new Vector(400, 300)
         fish.vel = new Vector(-100,0)
         this.add(fish)
