@@ -1,6 +1,7 @@
 import '../css/style.css'
 import { Actor, Engine, Vector } from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
+import { delay } from 'excalibur/build/dist/Util/Util.js'
 
 export class Game extends Engine {
 
@@ -9,10 +10,13 @@ export class Game extends Engine {
         this.start(ResourceLoader).then(() => this.startGame())
     }
 
-  
     startGame() {
         console.log("start de game!")
-        this.spawnFish()
+        for (let i = 0; i < 5; i++) {
+            delay(1000)
+            this.spawnFish()
+            
+          }
     }
 
     spawnFish(){
