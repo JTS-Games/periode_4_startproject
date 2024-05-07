@@ -9,20 +9,20 @@ export class Game extends Engine {
         this.start(ResourceLoader).then(() => this.startGame())
     }
 
+  
     startGame() {
         console.log("start de game!")
+        this.spawnFish()
+    }
+
+    spawnFish(){
         const fish = new Actor()
         fish.graphics.use(Resources.Fish.toSprite())
         fish.pos = new Vector(400, 300)
         fish.vel = new Vector(-100,0)
         this.add(fish)
-
-        const fish2 = new Actor()
-        fish2.graphics.use(Resources.Hank.toSprite())
-        fish2.pos = new Vector(400, 300)
-        fish2.vel = new Vector(100,0)
-        this.add(fish2)
     }
+
 }
 
 new Game()
