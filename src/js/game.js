@@ -9,7 +9,7 @@ export class Game extends Engine {
         super({ width: 800, height: 600 })
         this.start(ResourceLoader).then(() => this.startGame())
     }
-/*
+
     startGame() {
         console.log("start de game!")
 
@@ -17,7 +17,7 @@ export class Game extends Engine {
             this.spawnFish()
           }
     }
-    */
+    
     spawnFish(){
         const fish = new Actor()
         fish.graphics.use(Resources.Fish.toSprite())
