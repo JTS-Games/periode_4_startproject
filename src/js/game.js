@@ -16,6 +16,12 @@ export class Game extends Engine {
         fish.pos = new Vector(400, 300)
         fish.vel = new Vector(-100,0)
         this.add(fish)
+
+        const fish2 = new Actor()
+        fish2.graphics.use(Resources.Fish.toSprite())
+        fish2.pos = new Vector(400, 300)
+        fish2.vel = new Vector(100,0)
+        this.add(fish2)
     }
 }
 
