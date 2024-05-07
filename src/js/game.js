@@ -12,10 +12,10 @@ export class Game extends Engine {
 
     startGame() {
         console.log("start de game!")
+        
         for (let i = 0; i < 5; i++) {
             delay(1000)
             this.spawnFish()
-            
           }
     }
 
