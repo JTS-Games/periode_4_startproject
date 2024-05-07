@@ -9,16 +9,15 @@ export class Game extends Engine {
         super({ width: 800, height: 600 })
         this.start(ResourceLoader).then(() => this.startGame())
     }
-
+/*
     startGame() {
         console.log("start de game!")
-        
+
         for (let i = 0; i < 5; i++) {
-            delay(1000)
             this.spawnFish()
           }
     }
-
+    */
     spawnFish(){
         const fish = new Actor()
         fish.graphics.use(Resources.Fish.toSprite())
